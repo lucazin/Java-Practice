@@ -58,21 +58,24 @@ public class IsPalindromeLinkedList {
          node4.next = node5;
 
             
-         LinkedList<String> Lista = new LinkedList<>();
-         Lista.add("ss");
+         LinkedList<ListNode> Lista = new LinkedList<>();
+         Lista.add(node1);
+         Lista.add(node2);
+         Lista.add(node3);
+         Lista.add(node4);
+         Lista.add(node5);
 
-         
-
-         boolean ret = isPalindrome(null);
+        
+         boolean ret = isPalindrome(Lista);
     
     }
 
-    public static boolean isPalindrome(ListNode head)
+    public static boolean isPalindrome( LinkedList<ListNode> head)
     {
         if(head == null) return true;
 
-        ListNode slow = head;
-        ListNode fast = head;
+        ListNode slow = head.getFirst();
+        ListNode fast = head.getFirst();
 
         while(fast != null && fast.next != null)
         {
@@ -84,12 +87,12 @@ public class IsPalindromeLinkedList {
 
         while(temp_slow != null)
         {
-            if(temp_slow.val != head.val)
+            if(temp_slow.val != head.getFirst().val)
                 return false;
             else
             {
                 temp_slow = temp_slow.next;
-                head = head.next;
+                head.set(0, head.getFirst().next);
             }
         }
 
