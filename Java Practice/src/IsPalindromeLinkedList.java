@@ -66,7 +66,7 @@ public class IsPalindromeLinkedList {
          Lista.add(node5);
 
         
-         boolean ret = isPalindrome(Lista);
+        isPalindrome(Lista);
     
     }
 
@@ -105,7 +105,7 @@ public class IsPalindromeLinkedList {
        
         while(node != null)
         {
-            ListNode temp = node.next;  //  temp = 2 ; 
+            ListNode temp = node.next;  //
             node.next = retorno;  //2
             retorno = node;
             node = temp;
