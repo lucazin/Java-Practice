@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ReverseLinkedList {
@@ -57,7 +56,7 @@ public class ReverseLinkedList {
        
         while(node != null)
         {
-            ListNode temp = node.next;  //  temp = 2 ; 
+            ListNode temp = node.next;  //  
             node.next = saida;  //2
             saida = node;
             node = temp;

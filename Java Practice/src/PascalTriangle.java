@@ -37,8 +37,7 @@ public class PascalTriangle {
             ret.add(lista);
          }
        
-          ret.isEmpty();
-
+          
     }
 
 }
