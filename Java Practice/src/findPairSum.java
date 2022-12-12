@@ -22,6 +22,15 @@ public class findPairSum {
 
         //O(n) Time Coplexity
 
+        /* 
+         * 
+         * The loop is traversing elements of arr, so it does n iterations, and at each iteration, we are searching for a key in the hash table and eventually inserting a value. And in a hash table, inserting, searching, and removing have an O(1) cost in average, so:
+
+T(n) = n*O(1) = O(n)
+
+Space complexity: O(n)
+
+         */
 
       Hashtable hs = new Hashtable<>();
       hs.clear();
@@ -40,10 +49,14 @@ public class findPairSum {
     public static boolean GetSumValuesCheck(int[] arr,int target)
     {
 
+
+        // O(nlogn)
+
+
         int i=0;
         int j = arr.length-1;
 
-       Arrays.sort(arr);
+       Arrays.sort(arr); // O(nlogn)
 
         while(i < j)
         {
